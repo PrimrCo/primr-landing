@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { Button } from '../ui/Button';
 
 /**
@@ -36,9 +37,14 @@ export function Header() {
           {/* Logo */}
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <h1 className="text-2xl font-bold text-[#ce1620]">
-                Primr Events
-              </h1>
+              <Image
+                src="/primr-logo.svg"
+                alt="Primr Events - AI-Powered Event Management"
+                width={140}
+                height={42}
+                priority
+                className="h-10 w-auto"
+              />
             </div>
           </div>
 

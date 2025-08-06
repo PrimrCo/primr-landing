@@ -15,7 +15,7 @@ export function PainPointsSection() {
     {
       id: 'urgent-questions',
       title: 'Urgent Questions, No Quick Answers',
-      description: 'It&apos;s 11 PM and you need to know the venue capacity. Or the catering deadline. Or budget details. But that information is buried in a 47-page PDF you can&apos;t remember saving.',
+      description: 'It\'s 11 PM and you need to know the venue capacity. Or the catering deadline. Or budget details. But that information is buried in a 47-page PDF you can\'t remember saving.',
       icon: '❓'
     },
     {
@@ -41,7 +41,7 @@ export function PainPointsSection() {
         <div className="grid md:grid-cols-3 gap-8">
           {painPoints.map((painPoint) => (
             <div key={painPoint.id} className="group">
-              <div className="bg-gray-50 rounded-2xl p-8 h-full border border-gray-100 hover:border-[#ce1620] transition-colors duration-300">
+              <div className="bg-gray-50 rounded-2xl p-8 h-full border border-gray-100 hover:border-[#f4c000] transition-colors duration-300">
                 <div className="text-6xl mb-6 text-center">{painPoint.icon}</div>
                 <h3 className="text-2xl font-bold text-[#1a1a1a] mb-4 text-center">
                   {painPoint.title}
@@ -55,7 +55,7 @@ export function PainPointsSection() {
         </div>
 
         {/* Statistics */}
-        <div className="mt-16 bg-[#ce1620] rounded-2xl p-8 text-white">
+        <div className="mt-16 bg-gradient-to-r from-[#0160a0] to-[#014d80] rounded-2xl p-8 text-white">
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div>
               <div className="text-4xl font-bold text-[#f4c000] mb-2">40%</div>

@@ -74,7 +74,7 @@ export function SolutionSection() {
             <div className="pt-4">
               <Button
                 onClick={scrollToWaitlist}
-                className="bg-[#f4c000] text-[#0160a0] hover:bg-[#e6ad00] font-bold text-lg px-8 py-4"
+                className="bg-[#f4c000] text-[#1a1a1a] hover:bg-[#e6ad00] font-bold text-lg px-8 py-4 border-2 border-[#f4c000] hover:border-[#e6ad00]"
               >
                 Experience the Future of Event Planning
               </Button>

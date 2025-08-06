@@ -14,8 +14,7 @@ export function WaitlistSection() {
     name: '',
     email: ''
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  // Removed isSubmitting and isSubmitted state (no longer needed with plain POST)
   const [errors, setErrors] = useState<Partial<WaitlistFormData>>({});
 
   /**
@@ -45,30 +44,15 @@ export function WaitlistSection() {
    * Handles form submission
    * @param e - Form submission event
    */
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
     const formErrors = validateForm(formData);
     if (Object.keys(formErrors).length > 0) {
       setErrors(formErrors);
       return;
     }
-
-    setIsSubmitting(true);
-    setErrors({});
-
-    try {
-      // Simulate API call - replace with actual backend integration
-      await new Promise(resolve => setTimeout(resolve, 1000));
-
-      console.log('Waitlist signup:', formData);
-      setIsSubmitted(true);
-    } catch (error) {
-      console.error('Submission error:', error);
-      // Handle error state
-    } finally {
-      setIsSubmitting(false);
-    }
+    // If valid, submit the form using the browser (plain POST)
+    (e.target as HTMLFormElement).submit();
   };
 
   /**
@@ -83,39 +67,15 @@ export function WaitlistSection() {
     }
   };
 
-  if (isSubmitted) {
-    return (
-      <section id="waitlist" className="py-20 bg-gradient-to-br from-[#ce1620] to-[#a5121a]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-white rounded-2xl p-12 shadow-2xl">
-            <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
-              <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-              </svg>
-            </div>
-            <h2 className="text-3xl font-bold text-[#1a1a1a] mb-4">
-              Welcome to the Future! 🎉
-            </h2>
-            <p className="text-lg text-gray-600 mb-6">
-              Thank you for joining the Primr Events waitlist. You&apos;ll be among the first to experience AI-powered event management when we launch.
-            </p>
-            <p className="text-gray-500">
-              We&apos;ll send you exclusive updates and early access when available.
-            </p>
-          </div>
-        </div>
-      </section>
-    );
-  }
 
   return (
-    <section id="waitlist" className="py-20 bg-gradient-to-br from-[#ce1620] to-[#a5121a]">
+    <section id="waitlist" className="py-20 bg-gradient-to-br from-[#f4c000] to-[#e6ad00]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#1a1a1a] mb-6">
             Ready to Transform Your Events?
           </h2>
-          <p className="text-xl text-red-100 max-w-2xl mx-auto">
+          <p className="text-xl text-[#1a1a1a] opacity-80 max-w-2xl mx-auto">
             Join the waitlist for exclusive early access to the most advanced AI event management platform. Limited spots available.
           </p>
         </div>
@@ -129,8 +89,8 @@ export function WaitlistSection() {
               </h3>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-[#f4c000] rounded-full flex items-center justify-center mt-1">
-                    <svg className="w-4 h-4 text-[#1a1a1a]" fill="currentColor" viewBox="0 0 20 20">
+                  <div className="w-6 h-6 bg-[#0160a0] rounded-full flex items-center justify-center mt-1">
+                    <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
@@ -140,8 +100,8 @@ export function WaitlistSection() {
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-[#f4c000] rounded-full flex items-center justify-center mt-1">
-                    <svg className="w-4 h-4 text-[#1a1a1a]" fill="currentColor" viewBox="0 0 20 20">
+                  <div className="w-6 h-6 bg-[#0160a0] rounded-full flex items-center justify-center mt-1">
+                    <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
@@ -151,8 +111,8 @@ export function WaitlistSection() {
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-[#f4c000] rounded-full flex items-center justify-center mt-1">
-                    <svg className="w-4 h-4 text-[#1a1a1a]" fill="currentColor" viewBox="0 0 20 20">
+                  <div className="w-6 h-6 bg-[#0160a0] rounded-full flex items-center justify-center mt-1">
+                    <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
@@ -162,8 +122,8 @@ export function WaitlistSection() {
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-[#f4c000] rounded-full flex items-center justify-center mt-1">
-                    <svg className="w-4 h-4 text-[#1a1a1a]" fill="currentColor" viewBox="0 0 20 20">
+                  <div className="w-6 h-6 bg-[#0160a0] rounded-full flex items-center justify-center mt-1">
+                    <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
@@ -177,9 +137,16 @@ export function WaitlistSection() {
 
             {/* Waitlist form */}
             <div>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form
+                action="https://submit-form.com/c0z8jOm4b"
+                method="POST"
+                onSubmit={handleSubmit}
+                className="space-y-6"
+                target="_blank"
+              >
                 <Input
                   label="Full Name"
+                  name="name"
                   type="text"
                   placeholder="Enter your full name"
                   value={formData.name}
@@ -189,6 +156,7 @@ export function WaitlistSection() {
                 />
                 <Input
                   label="Professional Email"
+                  name="email"
                   type="email"
                   placeholder="your.email@company.com"
                   value={formData.email}
@@ -200,10 +168,9 @@ export function WaitlistSection() {
                 <Button
                   type="submit"
                   size="lg"
-                  isLoading={isSubmitting}
-                  className="w-full text-lg py-4"
+                  className="w-full text-lg py-4 bg-[#0160a0] hover:bg-[#014d80] text-white"
                 >
-                  {isSubmitting ? 'Securing Your Spot...' : 'Join the Waitlist - Free'}
+                  Join the Waitlist - Free
                 </Button>
               </form>
               <p className="text-xs text-gray-500 mt-4 text-center">

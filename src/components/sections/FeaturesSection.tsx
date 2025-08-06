@@ -2,7 +2,22 @@ import { Feature } from '../../types';
 
 /**
  * Features section showcasing key platform capabilities
- * Highlights specific features that solve user pain points
+ * Highlig            <div className="text-center">
+              <div className="bg-gradient-to-br from-[#f4c000] to-[#e6ad00] rounded-2xl p-8 text-[#1a1a1a]">
+                <h4 className="text-2xl font-bold mb-4">Ready to Experience It?</h4>
+                <p className="text-lg mb-6 opacity-90">
+                  Visit our live platform and see how AI event management works in real-time.
+                </p>
+                <a
+                  href="https://events.primr.co"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-[#0160a0] text-white font-bold py-3 px-6 rounded-lg hover:bg-[#014d80] transition-colors"
+                >
+                  Visit Live Platform →
+                </a>
+              </div>
+            </div>tures that solve user pain points
  */
 export function FeaturesSection() {
   const features: Feature[] = [
@@ -45,13 +60,13 @@ export function FeaturesSection() {
   ];
 
   return (
-    <section id="features" className="py-20 bg-[#F1EFEE]">
+    <section id="features" className="py-20 bg-gradient-to-br from-[#0160a0] to-[#014d80]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a1a] mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Powerful Features for Professional Event Planners
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
             Everything you need to transform your event planning process with cutting-edge AI event management technology.
           </p>
         </div>
@@ -59,7 +74,7 @@ export function FeaturesSection() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature) => (
             <div key={feature.id} className="group">
-              <div className="bg-white rounded-2xl p-8 h-full shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100 hover:border-[#ce1620]">
+              <div className="bg-white rounded-2xl p-8 h-full shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100 hover:border-[#f4c000]">
                 <div className="text-5xl mb-6">{feature.icon}</div>
                 <h3 className="text-xl font-bold text-[#1a1a1a] mb-4">
                   {feature.title}

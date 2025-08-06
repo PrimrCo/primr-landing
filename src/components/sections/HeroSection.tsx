@@ -24,10 +24,12 @@ export function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Hero Content */}
           <div className="space-y-8">
+
+
             <div className="space-y-4">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1a1a1a] leading-tight">
                 Transform Your Events with{' '}
-                <span className="text-[#ce1620]">AI-Powered</span>{' '}
+                <span className="text-[#0160a0]">AI-Powered</span>{' '}
                 Intelligence
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
@@ -39,21 +41,29 @@ export function HeroSection() {
               <Button
                 size="lg"
                 onClick={scrollToWaitlist}
-                className="text-lg px-8 py-4"
+                className="text-lg px-8 py-4 bg-[#0160a0] hover:bg-[#014d80]"
               >
                 Join the Waitlist - Free Early Access
               </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                onClick={() => window.open('https://events.primr.co', '_blank')}
-                className="text-lg px-8 py-4"
-              >
-                View Live Platform
-              </Button>
-            </div>
-
-            {/* Trust indicators */}
+              {/* <div className="flex flex-col gap-2 sm:ml-4 justify-center">
+                <a
+                  href="https://events.primr.co"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#0160a0] underline hover:text-[#ce1620] text-base font-medium transition-colors"
+                >
+                  🌐 Live Platform: events.primr.co
+                </a>
+                <a
+                  href="https://demo.primr.co"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#0160a0] underline hover:text-[#ce1620] text-base font-medium transition-colors"
+                >
+                  📖 Demo Project: demo.primr.co
+                </a>
+              </div> */}
+            </div>            {/* Trust indicators */}
             <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500">
               <div className="flex items-center gap-2">
                 <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
