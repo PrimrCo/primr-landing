@@ -90,8 +90,8 @@ export function HeroSection() {
           <div className="relative">
             <div className="relative z-10">
               <Image
-                src="https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-                alt="Professional event management with AI technology"
+                src="/images/make-it-happen.jpg"
+                alt="Make it happen - inspirational event planning"
                 width={1000}
                 height={500}
                 className="rounded-2xl shadow-2xl w-full h-[500px] object-cover"
