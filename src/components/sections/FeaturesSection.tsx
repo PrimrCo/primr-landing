@@ -30,7 +30,7 @@ export function FeaturesSection() {
     {
       id: 'smart-qa',
       title: 'Smart Q&A System',
-      description: 'Ask questions in plain English about your events. Get instant, accurate answers from all your uploaded documents and event data.',
+      description: 'Ask anything about your event—no matter how specific—and get instant, AI-powered answers from all your documents and data. Perfect for staff and volunteers who need info fast, even if it’s never been asked before.',
       icon: '❓'
     },
     {
@@ -41,8 +41,8 @@ export function FeaturesSection() {
     },
     {
       id: 'real-time-chat',
-      title: 'Interactive FAQ System',
-      description: 'Real-time chat interface with chat history. Share knowledge instantly with team members and stakeholders.',
+      title: 'Interactive FAQ & Team Chat',
+      description: 'Browse or search a team-curated FAQ for common questions, or chat live to share answers and knowledge. For repeat questions, the FAQ is instant; for anything new, Smart Q&A fills the gap—seamlessly.',
       icon: '💬'
     },
     {

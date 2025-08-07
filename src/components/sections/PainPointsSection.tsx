@@ -9,13 +9,13 @@ export function PainPointsSection() {
     {
       id: 'disorganized-info',
       title: 'Drowning in Scattered Documents?',
-      description: 'Vendor contracts, venue details, catering menus, guest lists – your event information is everywhere except where you need it. You&apos;re spending more time searching than planning.',
+      description: 'Vendor contracts, venue details, catering menus, guest lists – your event information is everywhere except where you need it. You\'re spending more time searching than planning.',
       icon: '📄'
     },
     {
       id: 'urgent-questions',
-      title: 'Urgent Questions, No Quick Answers',
-      description: 'It\'s 11 PM and you need to know the venue capacity. Or the catering deadline. Or budget details. But that information is buried in a 47-page PDF you can\'t remember saving.',
+      title: 'Staff & Volunteers Need Answers—Fast',
+      description: 'On event day, your team is bombarded with questions—“Where’s the AV tech?”, “What’s the WiFi password?”, “Who’s handling catering?” Instead of chasing down the event manager, staff and volunteers need instant access to information to keep the event running smoothly.',
       icon: '❓'
     },
     {
