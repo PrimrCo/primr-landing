@@ -38,7 +38,7 @@ export function Header() {
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <Image
-                src="/primr-logo.svg"
+                src="/images/logo-horizontal.png"
                 alt="Primr Events - AI-Powered Event Management"
                 width={140}
                 height={42}

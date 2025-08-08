@@ -16,7 +16,7 @@ export function Footer() {
           <div className="md:col-span-2">
             <div className="mb-4">
               <Image
-                src="/primr-logo.svg"
+                src="/images/logo-horizontal.png"
                 alt="Primr Events"
                 width={160}
                 height={48}
